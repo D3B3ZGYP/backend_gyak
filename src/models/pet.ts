@@ -88,7 +88,7 @@ export class PetManager{
         }
     }
 
-    public async queryPet(id: number): Promise<IPet> | undefined{
+    public async queryPet(id: number): Promise<IPet | undefined>{
         try{
             const result = await dbQuery("SELECT * FROM pet WHERE id = ?", id) as unknown as IPet[]
             console.log(result)
