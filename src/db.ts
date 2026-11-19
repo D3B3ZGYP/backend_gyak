@@ -6,7 +6,8 @@ const config = {
     host: process.env.DB_HOST || "localhost",
     user: process.env.DB_USER || "root",
     password: process.env.DB_PASSWORD || "jelszo",
-    database: process.env.DB_NAME || "kisallat"
+    database: process.env.DB_NAME || "allatmenhely",
+    port: process.env.DB_PORT || "3306"
 }
 
 export async function dbExecute(query: string, ...params: any[]): Promise<ResultSetHeader>{
